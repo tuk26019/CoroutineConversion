@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         cakeImageView = findViewById(R.id.imageView)
-        val scope = CoroutineScope(Job() + Dispatchers.Default)
+        val scope = CoroutineScope(Job() + Dispatchers.Main)
 
         findViewById<Button>(R.id.revealButton).setOnClickListener {
             scope.launch {
